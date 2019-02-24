@@ -6,7 +6,9 @@ using newApp.Models;
 namespace newApp.Context {
     public interface IBookContext
     {
+        IMongoCollection<Author> Authors { get; }
         IMongoCollection<Book> Books { get; }
+        
     }
 
 }

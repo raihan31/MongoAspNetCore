@@ -14,7 +14,10 @@ namespace newApp.Context {
            var client = new MongoClient(config.GetConnectionString("BookstoreDb"));
            _db = client.GetDatabase("BookStoreDb");
         }
+        
+        public IMongoCollection<Author> Authors => _db.GetCollection<Author>("Authors");
         public IMongoCollection<Book> Books => _db.GetCollection<Book>("Books");
+        
     }
 
 }

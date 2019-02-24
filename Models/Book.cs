@@ -18,7 +18,7 @@ namespace newApp.Models
         [BsonElement("Category")]
         public string Category { get; set; }
 
-        [BsonElement("Author")]
-        public string Author { get; set; }
+        [BsonElement("AuthorId")]
+        public BsonObjectId AuthorId { get; set; }
     }
 }
